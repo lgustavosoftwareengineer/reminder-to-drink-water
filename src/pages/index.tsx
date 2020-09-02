@@ -1,0 +1,25 @@
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+
+import { Container, Button } from '../styles/pages/Home'
+
+const Home: React.FC = () => {
+  return (
+    <>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <Container>
+        <h1>Irei lembrar você de beber água</h1>
+        <Link href="/clock">
+          <Button>
+            <p>Clique aqui para começar o contador</p>
+          </Button>
+        </Link>
+      </Container>
+    </>
+  )
+}
+
+export default Home

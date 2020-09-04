@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
+import logo from '../assets/logo.png'
 import { Container, Button } from '../styles/pages/Home'
 
 const Home: React.FC = () => {
@@ -11,6 +12,9 @@ const Home: React.FC = () => {
         <title>Home</title>
       </Head>
       <Container>
+        <p>
+          <img src={logo} alt="" width={150} />
+        </p>
         <h1>Irei lembrar você de beber água</h1>
         <Link href="/clock">
           <Button>

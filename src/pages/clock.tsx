@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import moment from 'moment'
-import waveFavicon from '../assets/favicons/wave.ico'
+import clockFavicon from '../assets/favicons/clock.ico'
 
 import Theme from '../styles/theme'
 import ClockVisor from '../components/ClockVisor'
@@ -68,7 +68,7 @@ const Clock: React.FC = () => {
     <Container>
       <Head>
         <title>O relógio esta ...</title>
-        <link rel="shortcut icon" href={waveFavicon} />
+        <link rel="shortcut icon" href={clockFavicon} />
       </Head>
 
       <div>

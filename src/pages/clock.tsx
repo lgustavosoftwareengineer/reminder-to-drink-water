@@ -1,45 +1,54 @@
 import React from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
+
+import moment from 'moment'
+import waveFavicon from '../assets/favicons/wave.ico'
 
 import ClockVisor from '../components/ClockVisor'
 import ButtonsSection from '../components/ButtonsSection'
 import TimeFinished from '../components/TimeFinished'
 
-import {
-  Container,
-  ClockContainer,
-  ClockTime,
-  Button,
-  ButtonsContainer,
-  ButtonPressed
-} from '../styles/pages/Clock'
+import { Container } from '../styles/pages/Clock'
+
 const Clock: React.FC = () => {
-  const [startMinute, setStartMinute] = React.useState(1)
+  const [startMinute, setStartMinute] = React.useState(0.2)
   const [time, setTime] = React.useState(startMinute * 60)
   const [minutes, setMinutes] = React.useState(0)
   const [seconds, setSeconds] = React.useState(0)
   const [isPlaying, setIsPlaying] = React.useState(false)
+  const [
+    whichFunctionalityIsRunning,
+    setWhichFunctionalityIsRunning
+  ] = React.useState('')
+  const [clockTime, setClockTime] = React.useState(moment().format('LT'))
 
   function updateCountdown() {
     setMinutes(Math.floor(time / 60))
     setSeconds(time % 60)
     setTime(time - 1)
   }
+
+  function updateClockTime() {
+    setClockTime(moment().format('LT'))
+  }
+
   // eslint-disable-next-line no-unused-expressions
   isPlaying ? setTimeout(updateCountdown, 1000) : () => reset()
 
-  function start() {
+  function play() {
     setIsPlaying(true)
+    setWhichFunctionalityIsRunning('play')
   }
 
-  function stop() {
+  function pause() {
     setIsPlaying(false)
+    setWhichFunctionalityIsRunning('pause')
   }
 
   function restart() {
     setTime(startMinute * 60)
     setIsPlaying(true)
+    setWhichFunctionalityIsRunning('restart')
   }
 
   function reset() {
@@ -47,24 +56,34 @@ const Clock: React.FC = () => {
   }
 
   React.useEffect(() => {
-    time <= 0 && stop()
+    time <= 0 && pause()
+    const interval = setInterval(() => {
+      updateClockTime()
+    }, 1000)
+    return () => clearInterval(interval)
   }, [time])
 
   return (
     <Container>
       <Head>
         <title>O relógio esta ...</title>
+        <link rel="shortcut icon" href={waveFavicon} />
       </Head>
+
+      <div>
+        <h1 style={{ color: Theme.colors.primary }}>{clockTime}</h1>
+      </div>
 
       <ClockVisor minutes={minutes} seconds={seconds} />
 
-      <TimeFinished time={time} />
+      <TimeFinished time={time} isPlaying={true} />
 
       <ButtonsSection
         isPlaying={isPlaying}
-        start={start}
-        stop={stop}
+        play={play}
+        pause={pause}
         restart={restart}
+        wfir={whichFunctionalityIsRunning}
       />
     </Container>
   )

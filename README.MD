@@ -22,7 +22,7 @@
    </a>
 </p>
 
-> ⏰ The **Reminder to Drink Water Website** is a website giftcard format to someone especial.
+> ⏰ The **Reminder to Drink Water Website** is a simple reminder to drink water.
 
 <p align="center">
     <a href="README.md">English</a>

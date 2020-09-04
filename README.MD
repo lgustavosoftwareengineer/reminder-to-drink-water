@@ -8,17 +8,17 @@
 	<a href="https://www.linkedin.com/in/luiz-gustavo-56146b1a5/">
       <img alt="Luiz Gustavo" src="https://img.shields.io/badge/-LuizGustavo-0853c4?style=flat&logo=Linkedin&logoColor=white" />
    </a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/tonicprism/giftcard-website?color=0853c4">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/tonicprism/reminder-to-drink-water?color=0853c4">
 
   <img src="https://img.shields.io/badge/version-1.0.0-0853c4.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/tonicprism/giftcard-website/#readme">
+  <a href="https://github.com/tonicprism/reminder-to-drink-water/#readme">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-0853c4.svg" target="_blank" />
   </a>
-   <a href="https://github.com/tonicprism/giftcard-website/commits/master">
-      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/tonicprism/giftcard-website?color=0853c4">
+   <a href="https://github.com/tonicprism/reminder-to-drink-water/commits/master">
+      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/tonicprism/reminder-to-drink-water?color=0853c4">
   </a>
-   <a href="https://github.com/tonicprism/giftcard-website/stargazers">
-      <img alt="Stargazers" src="https://img.shields.io/github/stars/tonicprism/giftcard-website?color=0853c4&logo=github">
+   <a href="https://github.com/tonicprism/reminder-to-drink-water/stargazers">
+      <img alt="Stargazers" src="https://img.shields.io/github/stars/tonicprism/reminder-to-drink-water?color=0853c4&logo=github">
    </a>
 </p>
 

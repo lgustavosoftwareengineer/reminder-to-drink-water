@@ -58,6 +58,8 @@ export const ClockContainer = styled.div`
   margin-bottom: 20px;
 `
 export const ClockTime = styled.span`
+  font-weight: bold;
+  margin: 20px 0 -20px;
   color: ${props => props.theme.colors.text};
 `
 export const Button = styled.a`

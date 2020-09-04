@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import logo from '../assets/logo.png'
+import waterDropFavicon from '../assets/favicons/water-drop.ico'
+
 import { Container, Button } from '../styles/pages/Home'
 
 const Home: React.FC = () => {
@@ -10,6 +12,7 @@ const Home: React.FC = () => {
     <>
       <Head>
         <title>Home</title>
+        <link rel="shortcut icon" href={waterDropFavicon} />
       </Head>
       <Container>
         <p>

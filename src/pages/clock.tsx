@@ -4,6 +4,7 @@ import Head from 'next/head'
 import moment from 'moment'
 import waveFavicon from '../assets/favicons/wave.ico'
 
+import Theme from '../styles/theme'
 import ClockVisor from '../components/ClockVisor'
 import ButtonsSection from '../components/ButtonsSection'
 import TimeFinished from '../components/TimeFinished'

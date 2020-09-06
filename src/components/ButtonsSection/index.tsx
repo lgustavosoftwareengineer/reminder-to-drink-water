@@ -13,11 +13,10 @@ interface ButtonsSectionProps {
   play(): void
   pause(): void
   restart(): void
-  wfir: any
+  wfir: string
 }
 
 const ButtonsSection: React.FC<ButtonsSectionProps> = ({
-  isPlaying,
   play,
   pause,
   restart,

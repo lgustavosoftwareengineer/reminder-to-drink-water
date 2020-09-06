@@ -15,35 +15,6 @@ export const Container = styled.div`
     margin: 30px;
     text-align: center;
   }
-
-  .button {
-    display: flex;
-    color: #fff;
-    background: rgba(29, 26, 26, 0);
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    min-width: 12rem;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    outline-color: #fff;
-    border-style: solid;
-    text-decoration-line: none;
-    justify-content: center;
-    margin: 1rem;
-  }
-
-  .button:focus {
-    outline: none;
-  }
-
-  .button:hover {
-    cursor: pointer;
-    color: ${props => props.theme.colors.background};
-    background: ${props => props.theme.colors.primary};
-    transition: all 0.8s ease;
-    border-radius: 20px;
-  }
 `
 export const ClockContainer = styled.div`
   display: flex;
@@ -52,7 +23,7 @@ export const ClockContainer = styled.div`
   align-items: center;
   font-size: 1.6rem;
   border-radius: 100%;
-  border: solid 2px #fff;
+  border: solid 2px ${props => props.theme.colors.primary};
   min-height: 200px;
   width: 200px;
   margin-bottom: 20px;
@@ -65,15 +36,15 @@ export const ClockTime = styled.span`
 export const Button = styled.a`
   p {
     display: flex;
-    color: #fff;
+    color: ${props => props.theme.colors.primary};
     background: rgba(29, 26, 26, 0);
     padding: 0.5rem;
     font-size: 1.2rem;
     margin-top: 1rem;
     min-width: 6rem;
-    border: 2px solid #fff;
+    border: 2px solid ${props => props.theme.colors.primary};
     border-radius: 10px;
-    outline-color: #fff;
+    outline-color: ${props => props.theme.colors.primary};
     border-style: solid;
     text-decoration-line: none;
     justify-content: center;
@@ -107,8 +78,8 @@ export const ButtonPressed = styled.p`
   font-size: 1.2rem;
   margin-top: 1rem;
   min-width: 6rem;
-  border: 2px solid #fff;
-  outline-color: #fff;
+  border: 2px solid ${props => props.theme.colors.primary};
+  outline-color: ${props => props.theme.colors.primary};
   border-style: solid;
   text-decoration-line: none;
   justify-content: center;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Button = styled.a`
   p {
     display: flex;
-    color: #fff;
+    color: ${props => props.theme.colors.primary};
     background: rgba(29, 26, 26, 0);
     padding: 0.5rem;
     font-size: 1.2rem;

@@ -7,7 +7,7 @@ export const ClockContainer = styled.div`
   align-items: center;
   font-size: 1.6rem;
   border-radius: 100%;
-  border: solid 2px #fff;
+  border: solid 2px ${props => props.theme.colors.primary};
   min-height: 200px;
   width: 200px;
   margin-bottom: 20px;

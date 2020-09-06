@@ -6,7 +6,6 @@ import {
   GiAnticlockwiseRotation
 } from 'react-icons/gi'
 
-import Theme from '../../styles/theme'
 import { Button, ButtonsContainer, ButtonPressed } from './styles'
 
 interface ButtonsSectionProps {

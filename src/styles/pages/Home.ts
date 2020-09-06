@@ -6,14 +6,14 @@ export const Button = styled.a`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: ${props => props.theme.colors.primary};
     background: rgba(29, 26, 26, 0);
     padding: 0.5rem;
     font-size: 1.2rem;
     margin-top: 1rem;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    outline-color: #fff;
+    border: 2px solid ${props => props.theme.colors.primary};
+    border-radius: 20px;
+    outline-color: ${props => props.theme.colors.primary};
     border-style: solid;
     text-decoration-line: none;
 
@@ -29,7 +29,7 @@ export const Button = styled.a`
     color: ${props => props.theme.colors.background};
     background: ${props => props.theme.colors.primary};
     transition: all 0.8s ease;
-    border-radius: 20px;
+    border-radius: 40px;
   }
 `
 export const Container = styled.div`

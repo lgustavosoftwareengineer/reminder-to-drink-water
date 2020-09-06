@@ -16,7 +16,7 @@ const Clock: React.FC = () => {
   // Contexts
   const themeContext = React.useContext(ThemeContext)
   const { startMinuteContext } = React.useContext(StartMinuteContext)
-  const [startMinute, setStartMinute] = React.useState(startMinuteContext)
+  const [startMinute] = React.useState(startMinuteContext)
   const [time, setTime] = React.useState(Number(startMinute) * 60)
   const [minutes, setMinutes] = React.useState(0)
   const [seconds, setSeconds] = React.useState(0)

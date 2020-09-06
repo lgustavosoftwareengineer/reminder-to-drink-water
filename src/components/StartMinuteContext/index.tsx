@@ -2,7 +2,7 @@ import { createContext } from 'react'
 
 interface Props {
   startMinuteContext: number
-  handlerDefiningTheStartMinuteContext()
+  handlerDefiningTheStartMinuteContext(value: number)
 }
 
 const StartMinuteContext = createContext<Props>({})

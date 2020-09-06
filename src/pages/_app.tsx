@@ -11,7 +11,7 @@ import lightTheme from '../styles/themes/lightTheme'
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [themeAlternator, setThemeAlternator] = React.useState(false)
   const [startMinuteContext, setStartMinuteContext] = React.useState(30)
-  function handlerDefiningTheStartMinuteContext(value) {
+  function handlerDefiningTheStartMinuteContext(value: number) {
     setStartMinuteContext(value)
   }
 

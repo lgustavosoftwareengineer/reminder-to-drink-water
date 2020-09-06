@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import StartMinuteContext from '../components/StartMinuteContext'
 
 import moment from 'moment'
 import clockFavicon from '../assets/favicons/clock.ico'
@@ -12,17 +13,19 @@ import TimeFinished from '../components/TimeFinished'
 import { Container } from '../styles/pages/Clock'
 
 const Clock: React.FC = () => {
-  const [startMinute, setStartMinute] = React.useState(0.2)
-  const [time, setTime] = React.useState(startMinute * 60)
+  // Contexts
+  const themeContext = React.useContext(ThemeContext)
+  const { startMinuteContext } = React.useContext(StartMinuteContext)
+  const [startMinute, setStartMinute] = React.useState(startMinuteContext)
+  const [time, setTime] = React.useState(Number(startMinute) * 60)
   const [minutes, setMinutes] = React.useState(0)
   const [seconds, setSeconds] = React.useState(0)
-  const [isPlaying, setIsPlaying] = React.useState(false)
+  const [isPlaying, setIsPlaying] = React.useState(true)
   const [
     whichFunctionalityIsRunning,
     setWhichFunctionalityIsRunning
   ] = React.useState('')
   const [clockTime, setClockTime] = React.useState(moment().format('LT'))
-  const themeContext = React.useContext(ThemeContext)
 
   function updateCountdown() {
     setMinutes(Math.floor(time / 60))

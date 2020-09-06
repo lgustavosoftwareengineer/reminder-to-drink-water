@@ -32,6 +32,16 @@ export const Button = styled.a`
     border-radius: 40px;
   }
 `
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 0 15px 0;
+  p {
+    font-size: 1rem;
+  }
+`
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -41,14 +51,14 @@ export const Container = styled.div`
   justify-content: center;
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: ${props => props.theme.colors.primary};
     margin: 30px;
     text-align: center;
   }
 
   @media (min-width: 600px) {
-    ${Button} {
+    ${Button}, ${ButtonsContainer} {
       align-self: center;
     }
 

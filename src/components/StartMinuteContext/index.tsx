@@ -1,10 +1,10 @@
 import { createContext } from 'react'
 
-interface Props {
+interface StartMinuteContextProps {
   startMinuteContext: number
   handlerDefiningTheStartMinuteContext(value: number)
 }
 
-const StartMinuteContext = createContext<Props>({})
+const StartMinuteContext = createContext<StartMinuteContextProps>({})
 
 export default StartMinuteContext

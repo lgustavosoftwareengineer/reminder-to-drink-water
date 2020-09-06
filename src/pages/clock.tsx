@@ -4,7 +4,7 @@ import Head from 'next/head'
 import moment from 'moment'
 import clockFavicon from '../assets/favicons/clock.ico'
 
-import Theme from '../styles/theme'
+import { ThemeContext } from 'styled-components'
 import ClockVisor from '../components/ClockVisor'
 import ButtonsSection from '../components/ButtonsSection'
 import TimeFinished from '../components/TimeFinished'
@@ -22,6 +22,7 @@ const Clock: React.FC = () => {
     setWhichFunctionalityIsRunning
   ] = React.useState('')
   const [clockTime, setClockTime] = React.useState(moment().format('LT'))
+  const themeContext = React.useContext(ThemeContext)
 
   function updateCountdown() {
     setMinutes(Math.floor(time / 60))
@@ -63,7 +64,7 @@ const Clock: React.FC = () => {
     }, 1000)
     return () => clearInterval(interval)
   }, [time])
-
+  console.log('Current theme: ', themeContext)
   return (
     <Container>
       <Head>
@@ -72,7 +73,7 @@ const Clock: React.FC = () => {
       </Head>
 
       <div>
-        <h1 style={{ color: Theme.colors.primary }}>{clockTime}</h1>
+        <h1 style={{ color: themeContext.colors.primary }}>{clockTime}</h1>
       </div>
 
       <ClockVisor minutes={minutes} seconds={seconds} />

@@ -5,6 +5,9 @@ interface StartMinuteContextProps {
   handlerDefiningTheStartMinuteContext(value: number)
 }
 
-const StartMinuteContext = createContext<StartMinuteContextProps>({})
+const StartMinuteContext = createContext<StartMinuteContextProps>({
+  startMinuteContext: 0,
+  handlerDefiningTheStartMinuteContext: () => null
+})
 
 export default StartMinuteContext

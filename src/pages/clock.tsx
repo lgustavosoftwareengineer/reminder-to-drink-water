@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import Head from 'next/head'
 import StartMinuteContext from '../components/StartMinuteContext'
 
@@ -11,21 +11,21 @@ import TimeFinished from '../components/TimeFinished'
 
 import { ThemeContext } from 'styled-components'
 import { Container } from '../styles/pages/Clock'
-
 const Clock: React.FC = () => {
   // Contexts
-  const themeContext = React.useContext(ThemeContext)
-  const { startMinuteContext } = React.useContext(StartMinuteContext)
-  const [startMinute] = React.useState(startMinuteContext)
-  const [time, setTime] = React.useState(Number(startMinute) * 60)
-  const [minutes, setMinutes] = React.useState(0)
-  const [seconds, setSeconds] = React.useState(0)
-  const [isPlaying, setIsPlaying] = React.useState(true)
+  const themeContext = useContext(ThemeContext)
+  const { startMinuteContext } = useContext(StartMinuteContext)
+
+  // States
+  const [time, setTime] = useState(Number(startMinuteContext) * 60)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true)
   const [
     whichFunctionalityIsRunning,
     setWhichFunctionalityIsRunning
-  ] = React.useState('')
-  const [clockTime, setClockTime] = React.useState(moment().format('LT'))
+  ] = useState('')
+  const [clockTime, setClockTime] = useState(moment().format('LT'))
 
   function updateCountdown() {
     setMinutes(Math.floor(time / 60))
@@ -51,13 +51,13 @@ const Clock: React.FC = () => {
   }
 
   function restart() {
-    setTime(startMinute * 60)
+    setTime(startMinuteContext * 60)
     setIsPlaying(true)
     setWhichFunctionalityIsRunning('restart')
   }
 
   function reset() {
-    setTime(startMinute * 60)
+    setTime(startMinuteContext * 60)
   }
 
   React.useEffect(() => {

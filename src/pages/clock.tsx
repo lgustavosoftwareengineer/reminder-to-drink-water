@@ -5,11 +5,11 @@ import StartMinuteContext from '../components/StartMinuteContext'
 import moment from 'moment'
 import clockFavicon from '../assets/favicons/clock.ico'
 
-import { ThemeContext } from 'styled-components'
 import ClockVisor from '../components/ClockVisor'
 import ButtonsSection from '../components/ButtonsSection'
 import TimeFinished from '../components/TimeFinished'
 
+import { ThemeContext } from 'styled-components'
 import { Container } from '../styles/pages/Clock'
 
 const Clock: React.FC = () => {
@@ -67,7 +67,7 @@ const Clock: React.FC = () => {
     }, 1000)
     return () => clearInterval(interval)
   }, [time])
-  console.log('Current theme: ', themeContext)
+
   return (
     <Container>
       <Head>

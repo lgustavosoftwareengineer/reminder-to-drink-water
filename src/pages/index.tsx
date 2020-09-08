@@ -11,8 +11,14 @@ import { Container, Button, ButtonsContainer } from '../styles/pages/Home'
 
 const Home: React.FC = () => {
   const themeContext = React.useContext(ThemeContext)
-  const [pressed1, setPressed1] = React.useState(false)
-  const [pressed2, setPressed2] = React.useState(false)
+  const [
+    twentyMinutesStartMinute,
+    setTwentyMinutesStartMinute
+  ] = React.useState(false)
+  const [
+    thirtyMinutesStartMinute,
+    setThirtyMinutesStartMinute
+  ] = React.useState(false)
   const {
     startMinuteContext,
     handlerDefiningTheStartMinuteContext
@@ -36,15 +42,17 @@ const Home: React.FC = () => {
             <Button
               onClick={() => {
                 handlerDefiningTheStartMinuteContext(20)
-                setPressed1(!pressed1)
+                setTwentyMinutesStartMinute(!twentyMinutesStartMinute)
               }}
             >
               <p
                 style={{
-                  backgroundColor: pressed1
+                  backgroundColor: twentyMinutesStartMinute
                     ? themeContext.colors.primary
                     : null,
-                  color: pressed1 ? themeContext.colors.background : null
+                  color: twentyMinutesStartMinute
+                    ? themeContext.colors.background
+                    : null
                 }}
               >
                 20 minutos
@@ -53,15 +61,17 @@ const Home: React.FC = () => {
             <Button
               onClick={() => {
                 handlerDefiningTheStartMinuteContext(30)
-                setPressed2(!pressed2)
+                setThirtyMinutesStartMinute(!thirtyMinutesStartMinute)
               }}
             >
               <p
                 style={{
-                  backgroundColor: pressed2
+                  backgroundColor: thirtyMinutesStartMinute
                     ? themeContext.colors.primary
                     : null,
-                  color: pressed2 ? themeContext.colors.background : null
+                  color: thirtyMinutesStartMinute
+                    ? themeContext.colors.background
+                    : null
                 }}
               >
                 30 minutos

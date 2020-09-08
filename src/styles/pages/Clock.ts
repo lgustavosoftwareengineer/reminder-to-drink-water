@@ -43,10 +43,7 @@ export const Button = styled.a`
     font-size: 1.2rem;
     margin-top: 1rem;
     min-width: 6rem;
-    border: 2px solid ${props => props.theme.colors.primary};
     border-radius: 10px;
-    outline-color: ${props => props.theme.colors.primary};
-    border-style: solid;
     text-decoration-line: none;
     justify-content: center;
     margin: 0 1rem;
@@ -79,9 +76,6 @@ export const ButtonPressed = styled.p`
   font-size: 1.2rem;
   margin-top: 1rem;
   min-width: 6rem;
-  border: 2px solid ${props => props.theme.colors.primary};
-  outline-color: ${props => props.theme.colors.primary};
-  border-style: solid;
   text-decoration-line: none;
   justify-content: center;
   margin: 0 1rem;

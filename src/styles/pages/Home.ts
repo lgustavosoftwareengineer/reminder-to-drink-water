@@ -11,9 +11,7 @@ export const Button = styled.a`
     padding: 0.5rem;
     font-size: 1.2rem;
     margin-top: 1rem;
-    border: 2px solid ${props => props.theme.colors.primary};
     border-radius: 20px;
-    outline-color: ${props => props.theme.colors.primary};
     border-style: solid;
     text-decoration-line: none;
 

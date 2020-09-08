@@ -11,18 +11,11 @@ import { Container, Button, ButtonsContainer } from '../styles/pages/Home'
 
 const Home: React.FC = () => {
   const themeContext = React.useContext(ThemeContext)
-  const [
-    twentyMinutesStartMinute,
-    setTwentyMinutesStartMinute
-  ] = React.useState(false)
-  const [
-    thirtyMinutesStartMinute,
-    setThirtyMinutesStartMinute
-  ] = React.useState(false)
-  const {
-    startMinuteContext,
-    handlerDefiningTheStartMinuteContext
-  } = React.useContext(StartMinuteContext)
+  const [timeOptionButtonOne, setTimeOptionButtonOne] = React.useState(false)
+  const [timeOptionButtonTwo, setTimeOptionButtonTwo] = React.useState(false)
+  const { handlerDefiningTheStartMinuteContext } = React.useContext(
+    StartMinuteContext
+  )
   return (
     <>
       <Head>
@@ -42,15 +35,15 @@ const Home: React.FC = () => {
             <Button
               onClick={() => {
                 handlerDefiningTheStartMinuteContext(20)
-                setTwentyMinutesStartMinute(!twentyMinutesStartMinute)
+                setTimeOptionButtonOne(!timeOptionButtonOne)
               }}
             >
               <p
                 style={{
-                  backgroundColor: twentyMinutesStartMinute
+                  backgroundColor: timeOptionButtonOne
                     ? themeContext.colors.primary
                     : null,
-                  color: twentyMinutesStartMinute
+                  color: timeOptionButtonOne
                     ? themeContext.colors.background
                     : null
                 }}
@@ -61,15 +54,15 @@ const Home: React.FC = () => {
             <Button
               onClick={() => {
                 handlerDefiningTheStartMinuteContext(30)
-                setThirtyMinutesStartMinute(!thirtyMinutesStartMinute)
+                setTimeOptionButtonTwo(!timeOptionButtonTwo)
               }}
             >
               <p
                 style={{
-                  backgroundColor: thirtyMinutesStartMinute
+                  backgroundColor: timeOptionButtonTwo
                     ? themeContext.colors.primary
                     : null,
-                  color: thirtyMinutesStartMinute
+                  color: timeOptionButtonTwo
                     ? themeContext.colors.background
                     : null
                 }}

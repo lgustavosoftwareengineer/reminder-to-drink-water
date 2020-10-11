@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext } from '../contexts/StartMinuteContext/node_modules/react'
 import Head from 'next/head'
-import StartMinuteContext from '../components/StartMinuteContext'
+import StartMinuteContext from '../contexts/StartMinuteContext'
 
 import moment from 'moment'
 import clockFavicon from '../assets/favicons/clock.ico'

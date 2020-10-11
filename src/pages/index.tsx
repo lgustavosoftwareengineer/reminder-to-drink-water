@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import StartMinuteContext from '../components/StartMinuteContext'
+import StartMinuteContext from '../contexts/StartMinuteContext'
 import { ThemeContext } from 'styled-components'
 
 import logo from '../assets/logo.png'

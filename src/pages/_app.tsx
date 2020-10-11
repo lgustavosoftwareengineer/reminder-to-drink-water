@@ -1,7 +1,7 @@
-import React from 'react'
+import React from '../contexts/StartMinuteContext/node_modules/react'
 import { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
-import StartMinuteContext from '../components/StartMinuteContext'
+import StartMinuteContext from '../contexts/StartMinuteContext'
 
 import GlobalStyle from '../styles/global'
 import { Header } from '../styles/pages/App'

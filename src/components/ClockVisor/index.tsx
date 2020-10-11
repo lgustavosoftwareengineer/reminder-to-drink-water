@@ -1,4 +1,4 @@
-import React from 'react'
+import React from '../../contexts/StartMinuteContext/node_modules/react'
 
 import { ClockContainer, ClockTime } from './styles'
 

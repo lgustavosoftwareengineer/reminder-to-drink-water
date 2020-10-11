@@ -1,4 +1,4 @@
-import React from '../contexts/StartMinuteContext/node_modules/react'
+import React from 'react'
 import Document, {
   DocumentInitialProps,
   DocumentContext,
